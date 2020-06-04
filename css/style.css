@@ -179,7 +179,7 @@ a {
 }
 
 .nav li {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 .nav li a {
@@ -234,6 +234,10 @@ a {
     width: 28px;
     height: 28px;
     background-image: url('/img/icon/user-nav.svg');
+}
+
+.nav-iteams-home {
+    display: none;
 }
 
 /*burger*/

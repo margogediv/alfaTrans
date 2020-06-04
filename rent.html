@@ -23,7 +23,7 @@
     <meta property="og:type" content="website"/>
     <meta name="twitter:card" content="summary_large_image">
 
-    <meta name="google-site-verification" content="9UjDXIBNZCgzFql89FYMgXJgyP2IfSbK5Pl-r4sUP3g"/>
+    <meta name="google-site-verification" content="9UjDXIBNZCgzFql89FYMgXJgyP2IfSbK5Pl-r4sUP3g" />
 
     <link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Comfortaa:wght@300;400;700&family=Montserrat+Alternates:wght@200;400;500&family=Roboto:wght@300;400;500&display=swap"
           rel="stylesheet">
@@ -77,25 +77,17 @@
                     <li data-id="home" class="nav-item active">
                         <a href="#home" data-to="home">главная</a>
                     </li>
-                    <ul class="nav-iteams-home">
-                        <li data-id="services" class="nav-item">
-                            <a href="#services" data-to="services">услуги</a>
-                        </li>
-                        <li data-id="about" class="nav-item">
-                            <a href="#about" data-to="about">о компании</a>
-                        </li>
-                        <li data-id="advantages" class="nav-item">
-                            <a href="#advantages" data-to="advantages">преимущества</a>
-                        </li>
-                        <li data-id="contacts" class="nav-item">
-                            <a href="#contacts" data-to="contacts">контакты</a>
-                        </li>
-                    </ul>
-                    <li class="nav-item">
-                        <a href="storage.html">ответственное хранение</a>
+                    <li data-id="services" class="nav-item">
+                        <a href="#services" data-to="services">услуги</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="rent.html">аренда склада</a>
+                    <li data-id="about" class="nav-item">
+                        <a href="#about" data-to="about">о компании</a>
+                    </li>
+                    <li data-id="advantages" class="nav-item">
+                        <a href="#advantages" data-to="advantages">преимущества</a>
+                    </li>
+                    <li data-id="contacts" class="nav-item">
+                        <a href="#contacts" data-to="contacts">контакты</a>
                     </li>
                 </ul>
 
@@ -103,7 +95,7 @@
                     <a href="tel:+79517157710" class="icon icon-nav-tel-blue tel"></a>
                     <a href="mailto:info@sklad-at.ru" class="icon icon-nav-mail-blue"></a>
 
-                    <a target="_blank" href="http://login.alfa-trans.ru/autoreg/" class="icon icon-user-red"></a>
+                    <a target="_blank" href="http://login.alfa-trans.ru/autoreg/"  class="icon icon-user-red"></a>
                 </div>
             </div>
         </div>
@@ -113,10 +105,6 @@
     <div class="content">
         <div id="to-home"></div>
         <div id="home" class="section screen section-1 banner mb">
-            <div class="section-label label-1" style="display: none;">
-                <span class="number">01</span>
-                <span class="name">Главная</span>
-            </div>
             <div class="banner-text">
                 <div class="text-container">
                     <h1 class="banner-title" style="display: none;">
@@ -731,9 +719,7 @@
 
     <div class="form-group group-captcha">
         <div class="captcha">
-            <div
-            <div id="my-captha-2"></div>
-        </div>
+            <div <div id="my-captha-2"></div></div>
     </div>
     </div>
 
@@ -762,17 +748,17 @@
 <script src="/js/owlCarousel/owl.carousel.min.js"></script>
 <script src="/js/app.js"></script>
 <script type="text/javascript">
-    var onloadCallback = function () {
+    var onloadCallback = function() {
         grecaptcha.render('my-captha', {
-            'sitekey': '6LelA_kUAAAAABKvL6RWauDHVD4wWcAZz8lF_qgt',
-            'callback': function () {
+            'sitekey' : '6LelA_kUAAAAABKvL6RWauDHVD4wWcAZz8lF_qgt',
+            'callback': function(){
                 document.getElementById('submit').removeAttribute('disabled');
             }
         });
 
         grecaptcha.render('my-captha-2', {
-            'sitekey': '6LelA_kUAAAAABKvL6RWauDHVD4wWcAZz8lF_qgt',
-            'callback': function () {
+            'sitekey' : '6LelA_kUAAAAABKvL6RWauDHVD4wWcAZz8lF_qgt',
+            'callback': function(){
                 document.getElementById('submit2').removeAttribute('disabled');
             }
         });
