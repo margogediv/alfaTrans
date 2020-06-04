@@ -1,0 +1,12 @@
+<svg width="312" height="312" viewBox="0 0 312 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="74.9414" width="237.059" height="237.059" rx="20" fill="#F5FCFD"/>
+<path d="M63.7651 217.352C78.3844 217.352 90.2357 205.501 90.2357 190.882C90.2357 176.262 78.3844 164.411 63.7651 164.411C49.1458 164.411 37.2944 176.262 37.2944 190.882C37.2944 205.501 49.1458 217.352 63.7651 217.352Z" stroke="#167FC9" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M99.0592 80.5874V98.2345C99.0592 105.735 93.3239 111.47 85.8239 111.47H68.1768" stroke="#167FC9" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M116.706 190.883H90.2358" stroke="#167FC9" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M218.176 93.8227H182.882V80.5874L143.176 111.47L182.882 142.352V129.117H275.53" stroke="#CA0503" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M244.647 93.8228H262.295" stroke="#CA0503" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M37.2942 190.883H19.6471C9.9412 190.883 2 182.942 2 173.236V141.03C2 133.53 4.64708 126.03 9.94121 120.294L72.5884 51.0296C80.9708 41.7648 92.8826 36.4707 105.236 36.4707H218.177" stroke="#167FC9" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M275.53 305.588V190.882C275.53 188.235 273.765 186.47 271.118 186.47H147.588C144.941 186.47 143.176 188.235 143.176 190.882V305.588C143.176 308.235 144.941 310 147.588 310H271.118C273.765 310 275.53 308.235 275.53 305.588Z" stroke="#167FC9" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M227 186.47V212.941H191.706V186.47" stroke="#167FC9" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M249.059 283.53H231.412" stroke="#CA0503" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"/>
+</svg>
