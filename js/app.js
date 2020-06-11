@@ -176,7 +176,7 @@ $(document).ready(function () {
     })
 
     //smooth scroll to screen
-    $('.nav li a').click(function (e) {
+    $('.nav .nav-section a').click(function (e) {
         e.preventDefault();
         let id = $(this).attr('data-to');
         let scrolled = $("#to-" + id).offset().top;
@@ -196,5 +196,18 @@ $(document).ready(function () {
         e.preventDefault();
         let scrolled = $("#to-services").offset().top;
         $('html, body').animate({scrollTop: scrolled}, '350');
+    });
+
+    //smooth scroll to screen
+    $('.dropdown .dropdown-select').click(function (e) {
+        e.preventDefault();
+        let dropdown = $(this).parents('.dropdown');
+        if(dropdown.hasClass('active')) {
+            dropdown.removeClass('active');
+            dropdown.children('.dropdown-list').removeClass('active');
+        } else {
+            dropdown.addClass('active');
+            dropdown.children('.dropdown-list').addClass('active');
+        }
     });
 });

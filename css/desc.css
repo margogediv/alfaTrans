@@ -42,6 +42,14 @@
         line-height: 1.5625vw;
     }
 
+    .nav li ul li a {
+        font-size: 0.8854166666666666vw;
+    }
+
+    .nav li ul li {
+        margin-bottom: 0.78125vw;
+    }
+
     .nav .list-icons {
         margin-top: 4.166666667vw;
     }
@@ -50,8 +58,37 @@
         margin-bottom: 1.5625vw;
     }
 
+    .icon.icon-nav-tel-blue {
+        font-size: 1.0416666666666665vw;
+        line-height: 1.25vw;
+    }
+
+    .icon-nav-tel-blue::before {
+        margin-right: 0.5208333333333333vw;
+    }
+
+    .icon.icon-nav-mail-blue {
+        font-size: 1.0416666666666665vw;
+        line-height: 1.25vw;
+    }
+
+    .icon-nav-mail-blue::before {
+        margin-right: 0.5208333333333333vw;
+    }
+
     .nav .list-icons .icon-user-red {
         margin-top: 3.645833333vw;
+    }
+
+    .dropdown-select {
+        width: 1.0416666666666665vw;
+        height: 1.0416666666666665vw;
+        margin-left: 0.26041666666666663vw;
+    }
+
+    .dropdown-select::after {
+        width: 0.78125vw;
+        height: 0.46875vw;
     }
 
     /*burger*/
