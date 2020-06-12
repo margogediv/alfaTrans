@@ -350,6 +350,10 @@
         max-width: 25.729166666667vw;
     }
 
+    .slide-about__btn {
+        margin-right: 56.25vw;
+    }
+
     .text-group .list-icon li {
         font-size: 1.0416666666667vw;
     }

@@ -184,6 +184,10 @@
         padding-left: 30px;
     }
 
+    .slide-about__btn {
+        margin-right: 30px;
+    }
+
     .rectangle::before {
         left: -30px;
         width: 110px;

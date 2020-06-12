@@ -330,6 +330,11 @@
     .slide-about .text-group {
         margin-top: 80px;
         padding-left: 80px;
+        flex-direction: column;
+    }
+
+    .slide-about__btn {
+        margin-top: 43px;
     }
 
     .section-3 {

@@ -890,6 +890,7 @@ a {
     width: 100%;
     margin-top: 98px;
     display: flex;
+    align-items: center;
     padding-left: 264px;
 }
 
@@ -906,6 +907,11 @@ a {
 
 .slide-about.item-3 .text-group ul {
     max-width: 494px;
+}
+
+.slide-about__btn {
+    white-space: nowrap;
+    margin-right: 180px;
 }
 
 .text-group .list-icon li {

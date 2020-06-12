@@ -60,6 +60,10 @@
         margin-left: 0;
     }
 
+    .slide-about__btn {
+        margin-right: 80px;
+    }
+
     /* label-3 */
     .section-label.label-3 {
         left: 0;
