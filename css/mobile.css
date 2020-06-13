@@ -24,7 +24,7 @@
     }
 
     .nav-container {
-        padding: 56px 47px 30px;
+        padding: 56px 38px 30px;
     }
 
     .nav li {
@@ -32,7 +32,7 @@
     }
 
     .nav li a {
-        font-size: 20px;
+        font-size: 28px;
     }
 
     .nav .icon-tel-red::before {
@@ -41,8 +41,8 @@
     }
 
     .nav .icon-user-red::before {
-        width: 28px;
-        height: 28px;
+        width: 34px;
+        height: 34px;
     }
 
     .header.nav_active .logo-group .logo-text {
@@ -51,12 +51,6 @@
 
     .nav .nav-container {
         position: relative;
-    }
-
-    .nav .list-icons {
-        left: 47px;
-        bottom: 0;
-        position: absolute;
     }
 
     .section.banner.mb {

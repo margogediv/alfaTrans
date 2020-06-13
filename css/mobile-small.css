@@ -4,27 +4,40 @@
     }
 
     .header-row {
-        height: 19.444444444444vw;
+        height: 90px;
     }
 
     .contact-group .tel.mr {
-        margin-right: 4.1666666666667vw;
+        margin-right: 15px;
+    }
+
+    .header .icon-user {
+        left: 50px;
     }
 
     .nav {
-        top: 50px;
+        top: 90px;
     }
 
     .nav-container {
-        padding: 15.555555555556vw 13.055555555556vw 8.3333333333333vw;
+        padding: 40px 15px;
     }
 
     .nav li {
-        margin-bottom: 9.7222222222222vw;
+        margin-bottom: 11.11111111111111vw;
     }
 
     .nav li a {
-        font-size: 5.5555555555556vw;
+        font-size: 7.777777777777778vw;
+    }
+
+    .nav li ul li a {
+        font-size: 6.111111111111111vw;
+        line-height: 7.777777777777778vw;
+    }
+
+    .nav li ul li {
+        margin-bottom: 6.666666666666667vw;
     }
 
     .nav .icon-tel-red::before {
@@ -37,8 +50,28 @@
         height: 7.7777777777778vw;
     }
 
+    .icon.icon-nav-tel-blue {
+        margin-bottom: 8.88888888888889vw !important;
+    }
+
+    .icon.icon-nav-tel-blue,
+    .icon.icon-nav-mail-blue {
+        font-size: 7.222222222222221vw;
+        line-height: 8.88888888888889vw;
+    }
+
+    .icon.icon-nav-tel-blue::before,
+    .icon.icon-nav-mail-blue::before {
+        width: 9.444444444444445vw;
+        height: 9.444444444444445vw;
+    }
+
+    .nav .list-icons .icon-user-red {
+        margin-top: 19.444444444444446vw;
+    }
+
     .section.banner.mb {
-        margin-top: 19.444444444444vw;
+        margin-top: 90px;
     }
 
     .section-label {
@@ -259,7 +292,7 @@
     }
 
     .section-3 .col-right .description {
-         white-space: normal;
+        white-space: normal;
     }
 
     .section-3 .col-right .btn {

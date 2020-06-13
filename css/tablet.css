@@ -45,34 +45,49 @@
         display: none;
     }
 
-    .nav .list-icons {
-        position: absolute;
-        bottom: 0;
-        left: 40px;
-        margin-bottom: 0;
+    .icon.icon-nav-tel-blue,
+    .icon.icon-nav-mail-blue {
+        font-size: 26px;
+        line-height: 32px;
     }
 
-    .nav .list-icons .icon-user-red {
-        margin-top: 110px
+    .icon.icon-nav-tel-blue::before,
+    .icon.icon-nav-mail-blue::before {
+        width: 34px;
+        height: 34px;
+        margin-right: 15px;
     }
 
     .nav li {
-        margin-bottom: 45px;
+        margin-bottom: 40px;
     }
 
     .nav li a {
-        font-size: 30px;
-        line-height: 38px;
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .nav li ul li {
+        margin-bottom: 24px;
+    }
+
+    .nav li ul li a {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .dropdown-list {
+        margin-top: 20px;
     }
 
     .nav-container {
         height: 100%;
         overflow: auto;
-        /*max-height: calc(100vh - 160px);*/
+        max-height: calc(100vh - 90px);
         position: relative;
     }
 
-    .header .tel {
+    .header .contact-group .tel {
         font-size: 0;
     }
 
