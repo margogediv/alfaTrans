@@ -8,8 +8,6 @@
     <link rel="shortcut icon" href="/favicon.png"/>
     <link rel="apple-touch-icon" href="/favicon.png">
 
-    <!--    <link rel="canonical" href="https://sklad-at.ru" />-->
-
     <title>Логистический комплекс Альфа Транс</title>
     <meta name="apple-mobile-web-app-title" content="Логистический комплекс Альфа Транс">
     <meta property="og:title" content="Логистический комплекс Альфа Транс"/>
@@ -321,7 +319,7 @@
             <div class="text-2-container">
                 <div class="col-left">
                     <div class="text">
-                        уже <span class="text-red"><b class="text_1">более</b> <b class="text_1">10 лет<b
+                        уже <span class="text-red text-bold"><b class="text_1">более</b> <b class="text_1">10 лет<b
                             class="text-black">.</b></b></span>
                     </div>
                 </div>
@@ -371,20 +369,38 @@
                             28 000+
                         </div>
                         <div class="text">
-                            <span class="text-red">кв. м.</span>
+                            <span class="text-red text-bold">кв. м.</span>
                             площадь хранения товарных партий
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!--            <div class="description rectangle">-->
-            <!--                <p>Среди наших клиентов много известных брендов и интернет-магазинов.</p>-->
-            <!--                <p>Мы взаимодействуем более чем с 1000 контрагентов <span-->
-            <!--                            class="text-blue">из России, Китая и Европы</span>.</p>-->
-            <!--                <p>Ежедневно мы, работая на наших клиентов, оптимизируем складские процессы, делая предоставляемые-->
-            <!--                    услуги более эффективными.</p>-->
-            <!--            </div>-->
+            <div class="description rectangle">
+                <p>
+                    Логистический оператор <span
+                        class="text-blue">ООО «Альфа Транс Безопасность»</span> предлагает полный комплекс услуг по
+                    ответственному хранению товаров на собственном складском терминале, расположенном в 8 км от
+                    федеральной автомобильной дороги М1 «Беларусь».
+                </p>
+                <p>
+                    Логистический комплекс оснащён автоматизированной системой учёта складских остатков и управления
+                    складом, адресной системой хранения товаров, стеллажным оборудованием, современной погрузочной
+                    техникой.
+                </p>
+                <p>
+                    Скорость, качество и стоимость наших услуг – это гарантия высокого конкурентного преимущества наших
+                    партнеров за счет оптимизации и снижении затрат на складскую логистику.
+                </p>
+                <p>
+                    Мы предлагаем нашим клиентам услуги ответственного хранения товаров на высочайшем профессиональном
+                    уровне <span class="text-medium">24/7 без перерывов и выходных</span>!
+                </p>
+                <p>
+                    За нас говорят <span class="text-red">более 10 лет безупречной работы</span> на рынке логистических
+                    услуг!
+                </p>
+            </div>
             <div id="to-advantages"></div>
         </div>
 
@@ -419,7 +435,7 @@
                         <div class="row center">
                             <a target="_blank" href="http://alfa-trans.ru/" class="btn btn-red">узнать больше</a>
                             <div class="description">
-                                о группе компаний <span class="text-bold">Альфа Транс</span>
+                                о группе компаний <span class="text-medium">Альфа Транс</span>
                             </div>
                         </div>
                     </div>
@@ -453,9 +469,7 @@
 
                     <li>
                         <img src="/img/sections/section-4/ico-4.svg" alt="">
-                        <div class="text">
-                            Партнёрский автоперевозчик по России и странам Европы
-                        </div>
+                        <div class="text">Партнерский автоперевозчик по России и странам Европы</div>
                     </li>
 
                     <li>
@@ -578,9 +592,20 @@
             <div id="to-contacts"></div>
         </div>
 
+        <div id="gallery-section" class="section gallery mb">
+            <div id="gallery-slider" class="gallery-slider">
+                <div class="nav-slider">
+                    <div class="prev"></div>
+                    <div class="next"></div>
+                </div>
+
+                <div class="items"></div>
+            </div>
+        </div>
+
         <div id="contacts" class="section screen section-7">
             <div class="section-label label-7">
-                <span class="number">07</span>
+                <span class="number">08</span>
                 <span class="name">КОНТАКТЫ</span>
             </div>
             <div class="container">
@@ -590,11 +615,6 @@
                 <p class="sub-title">ООО "Альфа Транс Безопасность"</p>
 
                 <div class="contacts">
-                    <!--                    <div class="col-left">-->
-                    <!--                        <a href="tel:+79517157710" class="icon icon-tel-blue tel">+7 (951) <span-->
-                    <!--                                    class="bold">715-77-10</span></a>-->
-                    <!--                        <a href="mailto:atlog@a-tr.ru" class="icon icon-mail-blue mail">atlog@a-tr.ru</a>-->
-                    <!--                    </div>-->
                     <div class="col-right">
                         <a href="#" class="icon icon-map-blue address">
                             Смоленская обл., Смоленский район,<br>
@@ -612,21 +632,13 @@
             </div>
         </div>
 
-        <div class="section section-8">
-            <!--            <img src="/img/map.jpg" alt="">-->
-            <iframe src="https://snazzymaps.com/embed/233723" width="100%" height="100%"></iframe>
+        <div id="map-container" class="section section-8 map-container">
+            <iframe id="map" src="https://snazzymaps.com/embed/233723" width="100%" height="100%" scrolling="no"
+                    seamless="seamless"></iframe>
         </div>
 
         <div class="section section-9">
             <div class="container">
-                <!--                <h3>Мы на связи!</h3>-->
-                <!--                <p class="text-1">-->
-                <!--                    С удовольствием ответим на все ваши вопросы по-->
-                <!--                    телефону-->
-                <!--                    <a href="tel:+79517157710" class="icon icon-tel-red tel">+7 (951) <span-->
-                <!--                                class="bold">715-77-10</span></a>-->
-                <!--                    или заполните форму обратной связи:-->
-                <!--                </p>-->
                 <form id="form-stat" class="form form-stat">
                     <input type="hidden" name="form" value="stat">
                     <div class="form-group group-input">
@@ -690,34 +702,6 @@
             </div>
         </div>
     </div> <!-- end content -->
-    <!--    <div class="footer">-->
-    <!--        <div class="container">-->
-    <!--            <div class="footer-logo">-->
-    <!--                <img src="/img/logo.svg" alt="">-->
-    <!--                <div class="footer-contacts" data-type="tablet">-->
-    <!--                    <a href="tel:+79517157710" class="icon icon-tel tel">+7 (951) <span-->
-    <!--                                class="bold">715-77-10</span></a>-->
-    <!--                    <a href="mailto:atlog@a-tr.ru" class="icon icon-mail-white mail">atlog@a-tr.ru</a>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--            <div class="footer-center">-->
-    <!--                <p class="text-1">-->
-    <!--                    ©ООО «Альфа Транс Безопасность»<br data-type="mobile"> 2010-2020-->
-    <!--                </p>-->
-    <!--                <p class="text-2">-->
-    <!--                    ИНН 6714031485, <br data-type="mobile">ОГРН 1106714001020-->
-    <!--                </p>-->
-    <!--                <p class="text-3">-->
-    <!--                    214550, Россия, Смоленская обл., Смоленский район, д.-->
-    <!--                    Стабна, ул. Заозерная, д. 35-->
-    <!--                </p>-->
-    <!--            </div>-->
-    <!--            <div class="footer-contacts" data-type="desc">-->
-    <!--                <a href="tel:+79517157710" class="icon icon-tel tel">+7 (951) <span class="bold">715-77-10</span></a>-->
-    <!--                <a href="mailto:atlog@a-tr.ru" class="icon icon-mail-white mail">atlog@a-tr.ru</a>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
 </div> <!-- app end -->
 
 <div id="modal-overlay" style="display: none;"></div>

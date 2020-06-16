@@ -312,7 +312,6 @@
     .section.section-2-sub .description.rectangle {
         padding-left: 80px;
         max-width: calc(100% - 40px);
-        margin-bottom: 100px;
     }
 
     .section.section-2-sub .description.rectangle::before {
@@ -447,7 +446,7 @@
     }
 
     .section-label.label-7 {
-        left: 0;
+        left: initial;
         top: -97px;
         margin-top: 0;
     }
