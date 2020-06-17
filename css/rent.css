@@ -3,20 +3,20 @@
     margin-top: 100px;
 }
 
-.banner-img-storage {
+.banner-img-rent {
     width: 100%;
     height: 941px;
     position: absolute;
     left: 0;
 }
 
-.banner-text-storage {
+.banner-text-rent {
     width: 100%;
     height: 941px;
     position: relative;
 }
 
-.text-container-storage {
+.text-container-rent {
     display: flex;
     flex-wrap: wrap;
     width: 468px;
@@ -25,7 +25,7 @@
     margin-top: 95px;
 }
 
-.text-blue-storage {
+.text-blue-rent {
     font-family: Comfortaa;
     font-style: normal;
     font-weight: bold;
@@ -35,10 +35,10 @@
 }
 
 .banner-subtitle {
-    margin: 70px 0 40px;
+    margin: 75px 0 40px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: normal;
     font-size: 19px;
     line-height: 150%;
     color: #222222;
@@ -48,30 +48,44 @@
     font-weight: 600;
 }
 
-/* Content-storage */
+/* Content-rent */
 
-.content-storage {
+.content-rent {
     position: relative;
     margin-top: 60px;
     margin-bottom: 120px;
 }
 
-.linear {
-    position: absolute;
-    top: -260px;
-    left: 0;
-    z-index: -1;
+.container.rent {
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.box-left,
-.box-richt {
-    margin-bottom: 80px;
-    width: 873px;
+.text-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.list-storage li {
+.box-left {
+    width: 100%;
+    display: flex;
+}
+
+.list-rent li {
+    width: 100%;
     display: flex;
     align-items: center;
+}
+
+.first-box {
+    margin-left: calc((100% - 1240px)/2 + 170px);
+}
+
+.box {
+    margin-left: calc((100% - 1240px)/2 + 170px);
 }
 
 .text-content {
@@ -87,30 +101,36 @@
     font-weight: bold;
 }
 
-.box-richt {
-    margin-left: calc(100% - 885px);
+.subtitle {
+    margin-bottom: 10px;
 }
 
-.text-link {
-    color: #167FC9;
-    text-decoration-color: #167FC9;
-    text-decoration-line: underline;
+.last-list {
+    margin-top: 50px;
 }
 
-.text-content.button {
+.ml80 {
+    margin-left: -95px;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb30 {
     margin-bottom: 30px;
 }
 
-.img-box {
-    margin-top: -106px;
-}
-.box-left.storage {
-    margin-bottom: 149px;
+.block-1 {
+    margin-bottom: 50px;
 }
 
+.block-2 {
+    margin-bottom: 30px;
+}
 
-
-
-
-
-
+.block-3 {
+    margin-bottom: 15px;
+}
+.block-4 {
+    margin-bottom: 80px;
+}
