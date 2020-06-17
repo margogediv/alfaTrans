@@ -297,6 +297,7 @@
 
     .section-3 .col-right .btn {
         margin-right: 3.0555555555556vw;
+        max-width: 39.0625vw;
     }
 
     .section-3 .col-right .description {

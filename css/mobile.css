@@ -184,6 +184,10 @@
         padding-left: 30px;
     }
 
+    .slide-about__btn {
+        margin-right: 30px;
+    }
+
     .rectangle::before {
         left: -30px;
         width: 110px;
@@ -362,12 +366,15 @@
 
     .section-3 .col-right .btn {
         margin-right: 11px;
+        max-width: 125px;
     }
 
     .section-3 .col-right .description {
         margin-top: 0;
         font-size: 15px;
         white-space: nowrap;
+        display: flex;
+        flex-direction: column;
     }
 
     .section-3 .col-right .description .text-blue {
