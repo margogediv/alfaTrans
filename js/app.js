@@ -147,7 +147,6 @@ $(document).ready(function () {
             type: request_method,
             data: form_data,
         }).done(function (res) {
-            console.log(res);
             submit.prop('disabled', false);
             form.children('.group-input').children('input').val("");
             form.children('.group-textarea').children('textarea').val("");
@@ -158,7 +157,6 @@ $(document).ready(function () {
             $('#modal-message').fadeIn(200);
         }).fail(function (jqXHR, exception) {
             console.error(exception);
-            console.log("error");
             submit.prop('disabled', false);
         });
     });
@@ -224,7 +222,6 @@ $(document).ready(function () {
     let listItemsGallery = [];
     let gallery = $('#gallery-slider .items');
     let maxIndexGallery = 0;
-    let currentIndexGallery = 0;
     let LastIndexGallery = 0;
     let queueItem = 0;
     fetch('http://alpha-trans.devzsg.net/gallery.php').then((response) => {
@@ -239,8 +236,6 @@ $(document).ready(function () {
 
 
     function createGallery(items) {
-        updateIndexGallery();
-
         $('#gallery-slider .items .item').remove();
 
         items.forEach(item => {
@@ -264,46 +259,50 @@ $(document).ready(function () {
                 from_index = maxIndexGallery - 1;
                 to_index = 6;
             } else {
-                from_index = LastIndexGallery - 1;
-                to_index = to_index - maxIndexGallery - 1;
+                from_index = LastIndexGallery;
+                to_index = to_index - maxIndexGallery + 1;
             }
 
-            items = listItemsGallery.slice(from_index, maxIndexGallery)
+            items = listItemsGallery.slice(from_index, maxIndexGallery + 1)
                 .concat(listItemsGallery
                     .slice(0, to_index));
+
+            to_index = to_index - 2;
         }
 
-        galleryStep(items, from_index, to_index);
+        galleryStep(items, to_index);
     });
 
     $('#gallery-slider .prev').click(function () {
         let items;
         let from_index = LastIndexGallery - 7;
-        let to_index = from_index - 7;
+        let to_index;
 
         if (from_index >= 7) {
-            items = listItemsGallery.slice(to_index, from_index);
+            to_index = from_index + 1;
+            from_index = from_index - 7 + 1;
+            items = listItemsGallery.slice(from_index, to_index);
         } else {
-            to_index = maxIndexGallery - (7 - from_index);
             if (from_index === 0) {
-                to_index = maxIndexGallery - (7 - from_index) - 1;
-                from_index = from_index + 1;
+                from_index = maxIndexGallery - 7 + 1;
+                items = listItemsGallery.slice(from_index, maxIndexGallery + 1);
+                to_index = maxIndexGallery;
+            } else {
+                items = listItemsGallery.slice(maxIndexGallery - (7 - from_index) + 1, maxIndexGallery + 1)
+                    .concat(listItemsGallery
+                        .slice(0, from_index));
+
+                to_index = from_index;
             }
-
-            items = listItemsGallery.slice(0, from_index)
-                .concat(listItemsGallery
-                    .slice(to_index, maxIndexGallery));
         }
-
-        galleryStep(items, to_index, to_index);
+        galleryStep(items, to_index);
     });
 
-    function galleryStep(items, index, to_index) {
+    function galleryStep(items, to_index) {
         if (!maxIndexGallery)
             return;
 
         $('#gallery-slider .items img:nth-child(2)').remove();
-        updateIndexGallery();
 
         let i = 0;
         items.forEach(src => {
@@ -313,11 +312,9 @@ $(document).ready(function () {
             );
         });
 
-        if (getCountItemGallery() !== 14) {
-            console.warn(getCountItemGallery());
-            console.log(items);
+        if (getCountItemGallery() !== 14)
             return;
-        }
+
 
         let first;
         for (i = 1; i <= 7; i++) {
@@ -327,23 +324,17 @@ $(document).ready(function () {
                 $(this).remove();
                 queueItem++;
                 if (queueItem === 7)
-                    callbackRemoveItemGallery(index, to_index);
+                    callbackRemoveItemGallery(to_index);
             });
         }
-    }
-
-    function updateIndexGallery() {
-        gallery.attr('data-max-index-gallery', maxIndexGallery);
-        gallery.attr('data-current-index-gallery', currentIndexGallery);
     }
 
     function getCountItemGallery() {
         return $('#gallery-slider .items img').length;
     }
 
-    function callbackRemoveItemGallery(index, to_index) {
+    function callbackRemoveItemGallery(to_index) {
         queueItem = 0;
-        currentIndexGallery = index;
         LastIndexGallery = to_index;
     }
 
