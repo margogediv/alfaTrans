@@ -226,19 +226,22 @@ $(document).ready(function () {
     let maxIndexGallery = 0;
     let currentIndexGallery = 0;
     let LastIndexGallery = 0;
+    let queueItem = 0;
     fetch('http://alpha-trans.devzsg.net/gallery.php').then((response) => {
         return response.json();
     })
         .then((data) => {
             listItemsGallery = data;
-            console.log(data);
             maxIndexGallery = listItemsGallery.length - 1;
+            LastIndexGallery = 7;
             createGallery(listItemsGallery.slice(0, 7));
         });
 
 
     function createGallery(items) {
         updateIndexGallery();
+
+        $('#gallery-slider .items .item').remove();
 
         items.forEach(item => {
             let html =
@@ -261,34 +264,47 @@ $(document).ready(function () {
                 from_index = maxIndexGallery - 1;
                 to_index = 6;
             } else {
-                to_index = 7 - (to_index + 1 - maxIndexGallery);
+                from_index = LastIndexGallery - 1;
+                to_index = to_index - maxIndexGallery - 1;
             }
 
             items = listItemsGallery.slice(from_index, maxIndexGallery)
                 .concat(listItemsGallery
                     .slice(0, to_index));
-
-            console.log(from_index, to_index, items);
         }
 
-        galleryStep(items, from_index);
+        galleryStep(items, from_index, to_index);
     });
 
     $('#gallery-slider .prev').click(function () {
-        let index = currentIndexGallery - 7;
-        if (index < 0)
-            index = maxIndexGallery;
+        let items;
+        let from_index = LastIndexGallery - 7;
+        let to_index = from_index - 7;
 
-        galleryStep(listItemsGallery.slice(index, index - 7), index, to_index);
+        if (from_index >= 7) {
+            items = listItemsGallery.slice(to_index, from_index);
+        } else {
+            to_index = maxIndexGallery - (7 - from_index);
+            if (from_index === 0) {
+                to_index = maxIndexGallery - (7 - from_index) - 1;
+                from_index = from_index + 1;
+            }
+
+            items = listItemsGallery.slice(0, from_index)
+                .concat(listItemsGallery
+                    .slice(to_index, maxIndexGallery));
+        }
+
+        galleryStep(items, to_index, to_index);
     });
 
     function galleryStep(items, index, to_index) {
-        if (!(maxIndexGallery && getCountItemGallery() === 7)) {
-            console.warn(getCountItemGallery());
+        if (!maxIndexGallery)
             return;
-        }
 
+        $('#gallery-slider .items img:nth-child(2)').remove();
         updateIndexGallery();
+
         let i = 0;
         items.forEach(src => {
             i++;
@@ -303,13 +319,17 @@ $(document).ready(function () {
             return;
         }
 
-        let first = $('#gallery-slider .items img:first-child');
-        first.fadeOut(1000);
-        first.queue(function () {
-            $(this).remove();
-            $(this).dequeue();
-            callbackRemoveItemGallery(index, to_index);
-        });
+        let first;
+        for (i = 1; i <= 7; i++) {
+            first = $('#gallery-slider .item:nth-child(' + i + ') img:first-child');
+            first.fadeOut(1000);
+            first.queue(function () {
+                $(this).remove();
+                queueItem++;
+                if (queueItem === 7)
+                    callbackRemoveItemGallery(index, to_index);
+            });
+        }
     }
 
     function updateIndexGallery() {
@@ -322,6 +342,7 @@ $(document).ready(function () {
     }
 
     function callbackRemoveItemGallery(index, to_index) {
+        queueItem = 0;
         currentIndexGallery = index;
         LastIndexGallery = to_index;
     }
