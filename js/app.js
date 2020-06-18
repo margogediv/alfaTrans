@@ -176,6 +176,14 @@ $(document).ready(function () {
     //smooth scroll to screen
     $('.nav .nav-section a').click(function (e) {
         e.preventDefault();
+
+        let page = $('.header').attr('data-page');
+        console.log(page !== '/');
+        if(page !== '/') {
+            location.href = '/' + $(this).attr('href');
+            return;
+        }
+
         let id = $(this).attr('data-to');
         let scrolled = $("#to-" + id).offset().top;
         $('.nav .nav-item').removeClass('active');
@@ -225,10 +233,11 @@ $(document).ready(function () {
     let LastIndexGallery = 0;
     let queueItem = 0;
     let countItem = 7;
-    fetch('http://alpha-trans.devzsg.net/gallery.php').then((response) => {
+    fetch('/gallery.php').then((response) => {
         return response.json();
     })
         .then((data) => {
+            console.log(data);
             listItemsGallery = data;
             maxIndexGallery = listItemsGallery.length - 1;
             createGallery();
@@ -255,32 +264,6 @@ $(document).ready(function () {
         });
     }
 
-    // $('#gallery-slider .next').click(function () {
-    //     let items;
-    //     let from_index = LastIndexGallery;
-    //     let to_index = from_index + 7;
-    //
-    //     if (to_index <= maxIndexGallery) {
-    //         items = listItemsGallery.slice(from_index, to_index);
-    //     } else {
-    //         if (from_index === maxIndexGallery) {
-    //             from_index = maxIndexGallery - 1;
-    //             to_index = 6;
-    //         } else {
-    //             from_index = LastIndexGallery;
-    //             to_index = to_index - maxIndexGallery + 1;
-    //         }
-    //
-    //         items = listItemsGallery.slice(from_index, maxIndexGallery + 1)
-    //             .concat(listItemsGallery
-    //                 .slice(0, to_index));
-    //
-    //         to_index = to_index - 2;
-    //     }
-    //
-    //     galleryStep(items, to_index);
-    // });
-
     $('#gallery-slider .next').click(function () {
         let items;
         let from_index = LastIndexGallery;
@@ -306,31 +289,6 @@ $(document).ready(function () {
 
         galleryStep(items, to_index);
     });
-
-    // $('#gallery-slider .prev').click(function () {
-    //     let items;
-    //     let from_index = LastIndexGallery - 7;
-    //     let to_index;
-    //
-    //     if (from_index >= 7) {
-    //         to_index = from_index + 1;
-    //         from_index = from_index - 7 + 1;
-    //         items = listItemsGallery.slice(from_index, to_index);
-    //     } else {
-    //         if (from_index === 0) {
-    //             from_index = maxIndexGallery - 7 + 1;
-    //             items = listItemsGallery.slice(from_index, maxIndexGallery + 1);
-    //             to_index = maxIndexGallery;
-    //         } else {
-    //             items = listItemsGallery.slice(maxIndexGallery - (7 - from_index) + 1, maxIndexGallery + 1)
-    //                 .concat(listItemsGallery
-    //                     .slice(0, from_index));
-    //
-    //             to_index = from_index;
-    //         }
-    //     }
-    //     galleryStep(items, to_index);
-    // });
 
     $('#gallery-slider .prev').click(function () {
         let items;

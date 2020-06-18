@@ -1,13 +1,19 @@
 /* Section-1 */
 .banner {
     margin-top: 100px;
+    height: 941px;
+    position: relative;
 }
 
 .banner-img-storage {
     width: 100%;
-    height: 941px;
+    /*height: 941px;*/
     position: absolute;
     left: 0;
+}
+
+.banner-img-storage img {
+    width: 100%;
 }
 
 .banner-text-storage {

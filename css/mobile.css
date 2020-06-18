@@ -756,6 +756,10 @@
         padding: 0 2.777777778vw;
     }
 
+    .gallery.mb {
+        margin-bottom: 200px;
+    }
+
     .gallery-slider .items {
         flex-wrap: wrap;
         justify-content: center;

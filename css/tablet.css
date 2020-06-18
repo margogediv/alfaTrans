@@ -678,6 +678,10 @@
     }
 
     /* gallery */
+    .gallery.mb {
+        margin-bottom: 200px;
+    }
+
     .gallery-slider {
         flex-direction: column-reverse;
         align-items: center;

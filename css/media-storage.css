@@ -1,3 +1,9 @@
+@media screen and (min-width: 1921px) {
+    .banner {
+        height: 49.010416667vw;
+    }
+}
+
 @media screen and (max-width: 1260px) {
 
     .banner {
@@ -22,10 +28,16 @@
     .banner-text-storage {
         order: 1;
         height: 283px;
+        position: static;
     }
 
     .btn.storage {
         padding: 12px 30px;
+        position: absolute;
+        bottom: 8vw;
+        left: 0;
+        margin: 0 15px;
+        max-width: calc(100% - 30px);
     }
 
     .subtitle-bold {
@@ -40,6 +52,7 @@
         margin-right: auto;
         right: 0;
         margin-top: 40px;
+        position: static;
     }
 
     .banner-title {
@@ -66,7 +79,6 @@
     }
 
     /* Content-storage */
-
     .section.content-storage {
         margin-top: 44px;
         margin-bottom: 80px;
@@ -93,6 +105,7 @@
 
     .section.banner {
         margin-top: 71px;
+        height: auto;
     }
 
     .text-container-storage {

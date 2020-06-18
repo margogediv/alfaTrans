@@ -24,7 +24,7 @@
     <div class="form-group group-captcha">
         <div class="captcha">
             <div
-            <div id="my-captha-2"></div>
+            <div id="my-captha"></div>
         </div>
     </div>
     </div>
@@ -63,11 +63,11 @@
             }
         });
 
-        grecaptcha.render('my-captha-2', {
-            'sitekey': '6LelA_kUAAAAABKvL6RWauDHVD4wWcAZz8lF_qgt',
-            'callback': function () {
-                document.getElementById('submit2').removeAttribute('disabled');
-            }
-        });
+        // grecaptcha.render('my-captha-2', {
+        //     'sitekey': '6LelA_kUAAAAABKvL6RWauDHVD4wWcAZz8lF_qgt',
+        //     'callback': function () {
+        //         document.getElementById('submit2').removeAttribute('disabled');
+        //     }
+        // });
     };
 </script>

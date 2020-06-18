@@ -4,6 +4,10 @@
         padding: 0 1.5625vw;
     }
 
+    .gallery.mb {
+        margin-bottom: 300px;
+    }
+
     .gallery-slider .nav-slider .prev {
         left: calc(15.625vw - 1.822916667vw);
     }
