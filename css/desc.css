@@ -563,7 +563,7 @@
     .section-6 {
         padding: 7.5vw 0 4.84375vw;
         background: linear-gradient(208.54deg, rgba(22, 127, 201, 0.05) 1.83%, rgba(59, 134, 186, 0.05) 20.5%, rgba(81, 81, 81, 0.05) 84.86%);
-        margin-bottom: 10.416666666666668vw;
+        margin-bottom: 14.322916667vw;
     }
 
     .clients .logo-1 {
@@ -912,6 +912,11 @@
     }
 
     .section-label.label-7 {
+        top: -3.645833333vw;
+        left: calc((100% - 64.583333333333vw) / 2 - 9.375vw);
+    }
+
+    .section-label.label-8 {
         top: -0.52083333333333vw;
         right: calc((100% - 64.583333333333vw) / 2 - 9.375vw);
     }
@@ -930,5 +935,13 @@
 
     #to-services {
         bottom: -6.25vw;
+    }
+
+    #to-gallery {
+        bottom: -4.166666667vw;
+    }
+
+    #to-working {
+        bottom: -4.166666667vw;
     }
 }

@@ -224,18 +224,26 @@ $(document).ready(function () {
     let maxIndexGallery = 0;
     let LastIndexGallery = 0;
     let queueItem = 0;
+    let countItem = 7;
     fetch('http://alpha-trans.devzsg.net/gallery.php').then((response) => {
         return response.json();
     })
         .then((data) => {
             listItemsGallery = data;
             maxIndexGallery = listItemsGallery.length - 1;
-            LastIndexGallery = 7;
-            createGallery(listItemsGallery.slice(0, 7));
+            createGallery();
         });
 
 
-    function createGallery(items) {
+    function createGallery() {
+        if ($(window).width() <= 1260)
+            countItem = 4;
+        else
+            countItem = 7;
+
+        let items = listItemsGallery.slice(0, countItem);
+        LastIndexGallery = countItem;
+
         $('#gallery-slider .items .item').remove();
 
         items.forEach(item => {
@@ -247,17 +255,43 @@ $(document).ready(function () {
         });
     }
 
+    // $('#gallery-slider .next').click(function () {
+    //     let items;
+    //     let from_index = LastIndexGallery;
+    //     let to_index = from_index + 7;
+    //
+    //     if (to_index <= maxIndexGallery) {
+    //         items = listItemsGallery.slice(from_index, to_index);
+    //     } else {
+    //         if (from_index === maxIndexGallery) {
+    //             from_index = maxIndexGallery - 1;
+    //             to_index = 6;
+    //         } else {
+    //             from_index = LastIndexGallery;
+    //             to_index = to_index - maxIndexGallery + 1;
+    //         }
+    //
+    //         items = listItemsGallery.slice(from_index, maxIndexGallery + 1)
+    //             .concat(listItemsGallery
+    //                 .slice(0, to_index));
+    //
+    //         to_index = to_index - 2;
+    //     }
+    //
+    //     galleryStep(items, to_index);
+    // });
+
     $('#gallery-slider .next').click(function () {
         let items;
         let from_index = LastIndexGallery;
-        let to_index = from_index + 7;
+        let to_index = from_index + countItem;// from_index + 7
 
         if (to_index <= maxIndexGallery) {
             items = listItemsGallery.slice(from_index, to_index);
         } else {
             if (from_index === maxIndexGallery) {
                 from_index = maxIndexGallery - 1;
-                to_index = 6;
+                to_index = countItem - 1;// 6
             } else {
                 from_index = LastIndexGallery;
                 to_index = to_index - maxIndexGallery + 1;
@@ -273,22 +307,48 @@ $(document).ready(function () {
         galleryStep(items, to_index);
     });
 
+    // $('#gallery-slider .prev').click(function () {
+    //     let items;
+    //     let from_index = LastIndexGallery - 7;
+    //     let to_index;
+    //
+    //     if (from_index >= 7) {
+    //         to_index = from_index + 1;
+    //         from_index = from_index - 7 + 1;
+    //         items = listItemsGallery.slice(from_index, to_index);
+    //     } else {
+    //         if (from_index === 0) {
+    //             from_index = maxIndexGallery - 7 + 1;
+    //             items = listItemsGallery.slice(from_index, maxIndexGallery + 1);
+    //             to_index = maxIndexGallery;
+    //         } else {
+    //             items = listItemsGallery.slice(maxIndexGallery - (7 - from_index) + 1, maxIndexGallery + 1)
+    //                 .concat(listItemsGallery
+    //                     .slice(0, from_index));
+    //
+    //             to_index = from_index;
+    //         }
+    //     }
+    //     galleryStep(items, to_index);
+    // });
+
     $('#gallery-slider .prev').click(function () {
         let items;
-        let from_index = LastIndexGallery - 7;
+        let from_index = LastIndexGallery - countItem; // LastIndexGallery - countItem
         let to_index;
 
         if (from_index >= 7) {
             to_index = from_index + 1;
-            from_index = from_index - 7 + 1;
+            from_index = from_index - countItem + 1; // from_index - 7 + 1
             items = listItemsGallery.slice(from_index, to_index);
         } else {
             if (from_index === 0) {
-                from_index = maxIndexGallery - 7 + 1;
+                from_index = maxIndexGallery - countItem + 1; // maxIndexGallery - 7 + 1
                 items = listItemsGallery.slice(from_index, maxIndexGallery + 1);
                 to_index = maxIndexGallery;
             } else {
-                items = listItemsGallery.slice(maxIndexGallery - (7 - from_index) + 1, maxIndexGallery + 1)
+                items = listItemsGallery.slice(maxIndexGallery - (countItem - from_index) + 1, maxIndexGallery + 1)
+                    //listItemsGallery.slice(maxIndexGallery - (7 - from_index) + 1, maxIndexGallery + 1)
                     .concat(listItemsGallery
                         .slice(0, from_index));
 
@@ -312,18 +372,17 @@ $(document).ready(function () {
             );
         });
 
-        if (getCountItemGallery() !== 14)
+        if (getCountItemGallery() !== countItem * 2) // getCountItemGallery() !== 14
             return;
 
-
         let first;
-        for (i = 1; i <= 7; i++) {
+        for (i = 1; i <= countItem; i++) { // i = 1; i <= 7; i++
             first = $('#gallery-slider .item:nth-child(' + i + ') img:first-child');
             first.fadeOut(1000);
             first.queue(function () {
                 $(this).remove();
                 queueItem++;
-                if (queueItem === 7)
+                if (queueItem === countItem) //queueItem === 7
                     callbackRemoveItemGallery(to_index);
             });
         }
@@ -338,4 +397,8 @@ $(document).ready(function () {
         LastIndexGallery = to_index;
     }
 
+    $(window).resize(function () {
+        if (listItemsGallery.length)
+            createGallery();
+    });
 });

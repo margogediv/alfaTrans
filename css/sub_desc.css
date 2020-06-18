@@ -157,6 +157,13 @@
     }
 
     .section-label.label-7 {
+        right: initial;
+        top: -120px;
+        left: 0;
+        margin-top: 0;
+    }
+
+    .section-label.label-8 {
         right: 0;
         left: initial;
         top: -120px;
@@ -243,5 +250,9 @@
 
     #to-contacts {
         bottom: 20px;
+    }
+
+    #to-gallery {
+        bottom: -20px;
     }
 }

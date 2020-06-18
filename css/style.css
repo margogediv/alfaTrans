@@ -1187,6 +1187,10 @@ a {
 }
 
 /* section-4 */
+.section-4 {
+    position: relative;
+}
+
 .section-4 ul {
     display: flex;
     justify-content: space-between;
@@ -1341,7 +1345,7 @@ a {
     position: relative;
     padding: 144px 0 93px;
     background: linear-gradient(208.54deg, rgba(22, 127, 201, 0.05) 1.83%, rgba(59, 134, 186, 0.05) 20.5%, rgba(81, 81, 81, 0.05) 84.86%);
-    margin-bottom: 200px;
+    margin-bottom: 275px;
 }
 
 .clients {
@@ -1382,6 +1386,7 @@ a {
 
 .gallery {
     padding: 0 30px;
+    position: relative;
 }
 
 .gallery.mb {
@@ -1990,6 +1995,11 @@ iframe {
 }
 
 .section-label.label-7 {
+    top: -70px;
+    left: calc((100% - 1240px) / 2 - 180px);
+}
+
+.section-label.label-8 {
     top: -10px;
     right: calc((100% - 1240px) / 2 - 180px);
 }
@@ -2014,11 +2024,6 @@ iframe {
     }
 }
 
-#to-contacts {
-    position: absolute;
-    bottom: -80px;
-}
-
 #to-advantages {
     position: absolute;
     bottom: -80px;
@@ -2032,6 +2037,26 @@ iframe {
 #to-services {
     position: absolute;
     bottom: -120px;
+}
+
+#to-clients {
+    position: absolute;
+    bottom: -100px;
+}
+
+#to-contacts {
+    position: absolute;
+    bottom: -80px;
+}
+
+#to-gallery {
+    position: absolute;
+    bottom: -80px;
+}
+
+#to-working {
+    position: absolute;
+    bottom: -80px;
 }
 
 .modal-message {

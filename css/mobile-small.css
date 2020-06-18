@@ -416,6 +416,10 @@
         top: -22.5vw;
     }
 
+    .section-label.label-8 {
+        top: -22.5vw;
+    }
+
     .section-7 h3 {
         font-size: 7.2222222222222vw;
     }
@@ -613,6 +617,14 @@
 
     #to-advantages {
         bottom: -9.375vw;
+    }
+
+    #to-working {
+        bottom: -40px;
+    }
+
+    #to-gallery {
+        bottom: 20px;
     }
 
 }
